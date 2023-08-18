@@ -40,6 +40,8 @@ public class PurchaseTest {
 
         float totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
+
+        assert totalPrice == 111 : "最终价钱计算错误";
     }
 
     @Test
@@ -68,6 +70,8 @@ public class PurchaseTest {
 
         float totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
+
+        assert totalPrice == 211 : "最终价钱计算错误";
     }
 
     @Test
@@ -77,6 +81,8 @@ public class PurchaseTest {
         Supermarket supermarket = new Supermarket();
         float totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
+
+        assert totalPrice == 203.2f : "最终价钱计算错误";
     }
 
     @Test
@@ -87,6 +93,8 @@ public class PurchaseTest {
         supermarket.setPromoteRule(promoteRule);
         float totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
+
+        assert totalPrice == 193.2f : "最终价钱计算错误";
     }
 
     /**
@@ -137,6 +145,8 @@ public class PurchaseTest {
         float totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
 
+        assert totalPrice == 90 : "最终价钱计算错误";
+
         fruits.clear();
         Fruit mango = new Mango();
         mango.setWeight(10);
@@ -145,6 +155,8 @@ public class PurchaseTest {
         totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
 
+        assert totalPrice == 91 : "最终价钱计算错误";
+
         fruits.clear();
         Fruit strawberry = new Strawberry();
         strawberry.setWeight(10);
@@ -152,5 +164,7 @@ public class PurchaseTest {
         fruits.add(strawberry);
         totalPrice = supermarket.countTotalPrice(fruits);
         System.out.println("最终价钱是：" + totalPrice);
+
+        assert totalPrice == 99.99f : "最终价钱计算错误";
     }
 }
